@@ -37,4 +37,8 @@ class USSD:
             print("USSD code running...")
             time.sleep(2)
             self.data()
+        elif self.user0 == "3":
+            print("USSD code running...")
+            time.sleep(2)
+            self.e-topUP()
         
