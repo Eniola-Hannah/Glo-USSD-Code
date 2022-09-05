@@ -41,4 +41,8 @@ class USSD:
             print("USSD code running...")
             time.sleep(2)
             self.e-topUP()
+        elif self.user0 == "4":
+            print("USSD code running...")
+            time.sleep(2)
+            self.berekete10X()
         
