@@ -29,4 +29,8 @@ class USSD:
         0. Exit
 
     >>  """)
+        if self.user0 == "1":
+            print("USSD code running...")
+            time.sleep(2)
+            self.registerNin()
         
