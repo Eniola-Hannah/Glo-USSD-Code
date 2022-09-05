@@ -45,4 +45,7 @@ class USSD:
             print("USSD code running...")
             time.sleep(2)
             self.berekete10X()
+        elif self.user0 == "0":
+            time.sleep(1)
+            sys.exit()
         
