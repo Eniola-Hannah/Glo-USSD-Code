@@ -7,7 +7,7 @@ class USSD:
         self.pin = "*777#"
         self.login()
 
-     def login(self):
+    def login(self):
         print(self.network)
         self.user = input("- Enter your USSD code - ")
         if self.user == self.pin:
@@ -19,3 +19,14 @@ class USSD:
             time.sleep(2)
             print("Sorry, the format of the string entered is not correct")
             self.login()
+
+     def mainMenu(self):
+        self.user0 = input("""
+        1. Register NIN
+        2. Data
+        3. E-top up
+        4. Berekete 10X
+        0. Exit
+
+    >>  """)
+        
