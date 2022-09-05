@@ -6,3 +6,16 @@ class USSD:
         self.network = "GLO... THE FAST NETWORK"
         self.pin = "*777#"
         self.login()
+
+     def login(self):
+        print(self.network)
+        self.user = input("- Enter your USSD code - ")
+        if self.user == self.pin:
+            print("USSD code running...")
+            time.sleep(2)
+            self.mainMenu()
+        else:
+            print("USSD code running...")
+            time.sleep(2)
+            print("Sorry, the format of the string entered is not correct")
+            self.login()
