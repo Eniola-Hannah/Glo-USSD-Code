@@ -5,3 +5,4 @@ class USSD:
     def __init__(self):
         self.network = "GLO... THE FAST NETWORK"
         self.pin = "*777#"
+        self.login()
