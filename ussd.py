@@ -33,4 +33,8 @@ class USSD:
             print("USSD code running...")
             time.sleep(2)
             self.registerNin()
+        elif self.user0 == "2":
+            print("USSD code running...")
+            time.sleep(2)
+            self.data()
         
