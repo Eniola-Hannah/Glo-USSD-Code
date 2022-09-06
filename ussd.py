@@ -118,5 +118,13 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.shareData()
+        elif self.user3 == "4":
+            print("ussd code running...")
+            time.sleep(2)
+            print("Dear Customer, your plan has expired and you do not have a data plan. To buy a data plan and continue browsing visit http://hsi.glo.com or dial *777#.")
+            sys.exit()
+        elif self.user3 == "0":
+            print("Thank you for choosing Glo")
+            sys.exit()
             
 glo = USSD()
