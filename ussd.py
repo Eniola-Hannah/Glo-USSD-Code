@@ -230,5 +230,38 @@ class USSD:
             print("WRONG INPUT")
             self.shareData()
 
+    def miniPlan(self):
+        self.user5 = input("""
+            1. N100=150MB 1 Day incl 35MB nite
+            2. N200=350mb 2 Days incl 110MB nite
+            3. N500=1.8GB 14 Days incl 1gb nite
+            4. N50=50MB 1 Day incl 5MB nite
+            0. Cancel
+        >> """)
+        if self.user5 == "1":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N100 data plan giving 150MB (115MB+35MB night) valid for 1 day.")
+        elif self.user5 == "2":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N200 data plan giving 350MB (350MB+110MB night) valid for 2 day.")
+        elif self.user5 == "3":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N500 data plan giving 1.8GB (1.8GB+1GB night) valid for 14 day.")
+        elif self.user5 == "4":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N50 data plan giving 50MB (50MB+5MB night) valid for 1 day.")
+        elif self.user5 == "0":
+            print("Thank you for choosing Glo")
+            time.sleep(1)
+            sys.exit()
+        else:
+            print("WRONG INPUT!")
+            self.miniPlan()
+
+
 
 glo = USSD()
