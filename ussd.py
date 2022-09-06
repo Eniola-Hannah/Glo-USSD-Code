@@ -262,6 +262,37 @@ class USSD:
             print("WRONG INPUT!")
             self.miniPlan()
 
+    def monthlyPlan(self):
+        self.user6 = input("""
+            1. N1000 = 3.9GB 30Days incl 2GB nite
+            2. N1500 = 7.5GB 30Days incl 4GB nite
+            3. N2000 = 9.2GB 30Days incl 4GB
+            4. N2500 = 10.8GB 30Days incl 4GB nite
+            0. Cancel
+        >> """)
+        if self.user6 == "1":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N1000 data plan giving 3.9GB (3.9GB+1GB night) valid for 30 day.")
+        elif self.user6 == "2":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N1500 data plan giving 7.5GB (7.5GB+4GB night) valid for 30 day.")
+        elif self.user6 == "3":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N4000 data plan giving 9.2GB (9.2GB+4GB night) valid for 30 day.")
+        elif self.user6 == "4":
+            print("ussd code running...")
+            time.sleep(2)
+            print("CONGRATS!, you have succefully subscribed to N2500 data plan giving 10.8GB (10.8GB+4GB night) valid for 30 day.")
+        elif self.user6 == "0":
+            print("Thank you for choosing Glo")
+            time.sleep(1) 
+            sys.exit()
+        else:
+            print("WRONG INPUT!")
+            self.monthlyPlan()
 
 
 glo = USSD()
