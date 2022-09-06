@@ -347,5 +347,26 @@ class USSD:
             print("Invalid Input") 
             self.superMegaPlan()  
 
+    def e_topUP(self):
+        self.enter8 = input("""
+            Welcome to Glo e-services
+                Please select an option
+
+                (1) Airtime
+                (2) Data
+            >""")
+        if self.enter8 == "1":
+            print("ussd code running...")
+            time.sleep(2)
+            self.e_Airtime()
+        elif self.enter8 == "2":
+            print("ussd code running...")
+            time.sleep(2)
+            self.e_Data()
+        else:
+            print("invalid input")
+            time.sleep(2)
+            self.e_topUP()
+
 
 glo = USSD()
