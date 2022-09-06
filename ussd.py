@@ -325,6 +325,27 @@ class USSD:
         else:
             print("WRONG INPUT!")
             self.megaPlan() 
+        
+    def superMegaPlan(self):
+        self.user8 = input("""
+            1. N30000 = 225GB 30Days
+            2. N36000 = 300GB 30Days
+            3. N50000 = 425GB 90Days
+            4. N60000 = 525GB 120Days
+            0. Cancel
+        >> """)
+        if (self.user8 == "1") or (self.user8 == "2") or (self.user8 == "3") or (self.user8 == "4"):
+            print("ussd code running...")
+            time.sleep(2)
+            print("SORRY! Insufficient credit balance for the plan you want to buy. Please recharge your line or you can simply Borrow data. To Borrow Data now, just dial *321#")
+            sys.exit()
+        elif user0 == "0":
+            print("Thank you for choosing Glo")
+            time.sleep(1)
+            sys.exit()
+        else:
+            print("Invalid Input") 
+            self.superMegaPlan()  
 
 
 glo = USSD()
