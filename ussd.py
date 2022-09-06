@@ -109,6 +109,13 @@ class USSD:
         if self.user3 == "1":
             print("ussd code running...")
             time.sleep(2)
+             self.input =  input("""
+                1. Proceed(Auto-Renew)
+                2. Proceed(One-Off)
+            > """)
+            if (self.input == "1") or (self.input == "2"):
+                time.sleep(1)
+                self.buyData()
             self.buyData()
         elif self.user3 == "2":
             print("ussd code running...")
@@ -139,6 +146,10 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.miniPlan()
+        elif self.user9 == "2":
+            print("ussd code running...")
+            time.sleep(2)
+            self.monthlyPlan()
 
-            
+
 glo = USSD()
