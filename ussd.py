@@ -20,7 +20,7 @@ class USSD:
             print("Sorry, the format of the string entered is not correct")
             self.login()
 
-     def mainMenu(self):
+    def mainMenu(self):
         self.user0 = input("""
         1. Register NIN
         2. Data
@@ -48,4 +48,10 @@ class USSD:
         elif self.user0 == "0":
             time.sleep(1)
             sys.exit()
-        
+        else:
+            print("USSD code running...")
+            time.sleep(2)
+            print("Invalid input")
+            self.mainMenu()
+
+glo = USSD()
