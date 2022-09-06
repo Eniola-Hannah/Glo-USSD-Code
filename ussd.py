@@ -110,5 +110,8 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.buyData()
-            
+        elif self.user3 == "2":
+            print("ussd code running...")
+            time.sleep(2)
+            self.giftData()
 glo = USSD()
