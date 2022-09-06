@@ -15,8 +15,7 @@ class USSD:
             time.sleep(2)
             self.mainMenu()
         else:
-            print("USSD code running...")
-            time.sleep(2)
+            time.sleep(1)
             print("Sorry, the format of the string entered is not correct")
             self.login()
 
@@ -40,7 +39,7 @@ class USSD:
         elif self.user0 == "3":
             print("USSD code running...")
             time.sleep(2)
-            self.e-topUP()
+            self.e_topUP()
         elif self.user0 == "4":
             print("USSD code running...")
             time.sleep(2)
@@ -49,8 +48,7 @@ class USSD:
             time.sleep(1)
             sys.exit()
         else:
-            print("USSD code running...")
-            time.sleep(2)
+            time.sleep(1)
             print("Invalid input")
             self.mainMenu()
 
@@ -98,7 +96,7 @@ class USSD:
             print("WRONG INPUT!")
             self.registerNin()
         
-    def data():
+    def data(self):
         self.user3 = input("""
             1. Buy Data Plan
             2. Gift Data Plan
@@ -151,19 +149,19 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.miniPlan()
-        elif self.user9 == "2":
+        elif self.user4 == "2":
             print("ussd code running...")
             time.sleep(2)
             self.monthlyPlan()
-        elif self.user9 == "3":
+        elif self.user4 == "3":
             print("ussd code running...")
             time.sleep(2)
             self.megaPlan()
-        elif self.user9 == "4":
+        elif self.user4 == "4":
             print("ussd code running...")
             time.sleep(2)
             self.superMegaPlan()
-        elif self.user9 == "0":
+        elif self.user4 == "0":
             print("Thank you for choosing Glo")
             time.sleep(2)
             sys.exit()
@@ -220,6 +218,7 @@ class USSD:
                 print("You have input more than 11 digit number")
             else:
                 print("Invalid Input")
+                self.shareData()
         elif self.userInput3 == "2":
             print("Please enter subscriber\'s number:")
             self.userInput5 = input("-->  ")
@@ -231,6 +230,7 @@ class USSD:
                 print("You have input more than 11 digit number")
             else:
                 print("Invalid Input") 
+                self.shareData()
         else:
             print("WRONG INPUT")
             self.shareData()
@@ -402,7 +402,7 @@ class USSD:
                 print("Thanks for choosing GLO")
                 sys.exit()
             else:
-                time.sleep(2)
+                time.sleep(1)
                 ("Invalid Input")
                 self.e_Airtime()
         elif self.enter9 == "2":
@@ -418,7 +418,7 @@ class USSD:
                 if len(self.enter22) >= 2:
                     print("ussd code running...")
                     time.sleep(3)
-                    print("Your request is being processed, we will send you an SMS shortly \nThank you for using Glo e-services, thesimplest way to recharge and buy data for family, friends and yourself")
+                    print("Your request is being processed, we will send you an SMS shortly \nThank you for using Glo e-services, the simplest way to recharge and buy data for family, friends and yourself")
                     sys.exit()
                 else:
                     print("Invalid input")
@@ -439,19 +439,19 @@ class USSD:
                         print("Your request is being processed, we will send you an SMS shortly  \nThank you for using Glo e-services, thesimplest way to recharge and buy data for family, friends and yourself")
                         sys.exit()
                     else:
-                        time.sleep(2)
+                        time.sleep(1)
                         print("Invalid amount")
                         self.e_Airtime()
                 else:
-                    time.sleep(2)
+                    time.sleep(1)
                     print("Invalid input")
                     self.e_Airtime()
             else:
-                time.sleep(2)
+                time.sleep(1)
                 print("Invalid input")
                 self.e_Airtime()
         else:
-            time.sleep(2)
+            time.sleep(1)
             print("Invalid input")
             self.e_Airtime()
 
