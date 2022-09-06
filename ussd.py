@@ -449,7 +449,7 @@ class USSD:
             time.sleep(2)
             print("Invalid input")
             self.e_Airtime()
-            
+
 
     def e_Data(self):
         self.userInput = input("""
@@ -504,5 +504,24 @@ class USSD:
             print("WRONG INPUT")
             self.e_Data()
 
+    def berekete10X(self):
+        self.userInput6 = input("""
+            1. Migrate Now
+            2. Back
+            0. Cancel
+        > """)
+        if self.userInput6 == "1":
+            print("ussd code running...")
+            time.sleep(2)
+            print("Dear Customer, you have been migrated from GLO_BEREKETE to BEREKETE_10X")
+            sys.exit()
+        elif self.userInput6 == "2":
+            time.sleep(1)
+            self.mainMenu()
+        elif self.userInput6 == "0":
+            time.sleep(1)
+            print("Thank you for using Glo")
+            sys.exit()
+      
 
 glo = USSD()
