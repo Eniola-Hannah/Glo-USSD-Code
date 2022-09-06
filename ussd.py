@@ -368,6 +368,7 @@ class USSD:
             time.sleep(2)
             self.e_topUP()
 
+
     def e_Airtime(self):
         self.enter9 = input("""
             AIRTIME
@@ -448,6 +449,60 @@ class USSD:
             time.sleep(2)
             print("Invalid input")
             self.e_Airtime()
+            
+
+    def e_Data(self):
+        self.userInput = input("""
+           DATA PLAN PURCHASE
+            1. Self,
+            2. Third party
+            00. cancel
+        > """)
+        if self.userInput == "1":
+            self.userInput0 = input("""
+            1. N100 = 105MB 1Day incl 15MB nite,
+            2. N200 = 350MB 2Day incl 110MB nite,
+            3. N500 = 1.05GB 14Day incl 25M0B nite,
+            4. N1000 = 2.5GB
+            0. Cancel
+            > """)
+            if (self.userInput0 == "1") or (self.userInput0 == "2") or (self.userInput0 == "3") or (self.userInput0 == "4"):
+                print("ussd code running...")
+                time.sleep(2)
+                print("Your request is being processed, we will send you an SMS shortly  \nThank you for using Glo e-services")
+                sys.exit()
+            elif  self.userInput0 == "0":
+                print("Thank you for using Glo e-services")
+                time.sleep(1)
+                sys.exit()
+        elif self.userInput == "2":
+            print("ussd code runnig...")
+            time.sleep(3)
+            print("Please enter phone number: \nGlo line only Please")
+            self.userInput1 = input("--  ")
+            if len(self.userInput1) == 11:
+                print("Enter Amount")
+                self.userInput2 = input("--  ")
+                if len(self.userInput2) >= 2:
+                    print("ussd code running...")
+                    time.sleep(3)
+                    print("Your request is being processed, we will send you an SMS shortly  \nThank you for using Glo e-services, the simplest way to recharge and buy data for family, friends and yourself")
+                else:
+                    print("ussd code running...")
+                    time.sleep(2)
+                    print("Invalid input")
+                    self.e_Data()
+            else:
+                print("ussd code running...")
+                time.sleep(2)
+                print("WRONG INPUT")
+                self.e_Data()
+        elif self.userInput == "00":
+            print("Thank you for using Glo e-services, the simplest way to recharge and buy data for family, friends and yourself")
+            sys.exit()
+        else:
+            print("WRONG INPUT")
+            self.e_Data()
 
 
 glo = USSD()
