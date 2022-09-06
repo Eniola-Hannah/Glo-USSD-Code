@@ -97,5 +97,18 @@ class USSD:
         else:
             print("WRONG INPUT!")
             self.registerNin()
+        
+    def data():
+        self.user3 = input("""
+            1. Buy Data Plan
+            2. Gift Data Plan
+            3. Share Data Plan
+            4. Check Data Balance
+            0. Exit
+        >> """)
+        if self.user3 == "1":
+            print("ussd code running...")
+            time.sleep(2)
+            self.buyData()
             
 glo = USSD()
