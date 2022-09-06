@@ -158,6 +158,13 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.superMegaPlan()
+        elif self.user9 == "0"
+            print("Thank you for choosing Glo")
+            time.sleep(2)
+            sys.exit()
+        else:
+            print("Invalid Input")
+            self.giftData()
 
 
 glo = USSD()
