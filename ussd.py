@@ -126,5 +126,19 @@ class USSD:
         elif self.user3 == "0":
             print("Thank you for choosing Glo")
             sys.exit()
+    
+    def buyData(self):
+        self.user4 = input("""
+            1. Mini plans
+            2. Monthly Plans
+            3. Mega Plans
+            4. Super Mega Plans
+            0. Exit
+        >> """)
+        if self.user4 == "1":
+            print("ussd code running...")
+            time.sleep(2)
+            self.miniPlan()
+
             
 glo = USSD()
