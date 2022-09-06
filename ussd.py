@@ -164,6 +164,39 @@ class USSD:
             sys.exit()
         else:
             print("Invalid Input")
+            self.buyData()
+
+    def giftData(self):
+        self.user9 = input("""
+        Select a Gift to plan;
+            1. Mini plans
+            2. Monthly Plans
+            3. Mega Plans
+            4. Super Mega Plans
+            0. Exit
+        > """)
+        if self.user9 == "1":
+            print("ussd code running...")
+            time.sleep(2)
+            self.miniPlan()
+        elif self.user9 == "2":
+            print("ussd code running...")
+            time.sleep(2)
+            self.monthlyPlan()
+        elif self.user9 == "3":
+            print("ussd code running...")
+            time.sleep(2)
+            self.megaPlan()
+        elif self.user9 == "4":
+            print("ussd code running...")
+            time.sleep(2)
+            self.superMegaPlan()
+        elif self.user9 == "0"
+            print("Thank you for choosing Glo")
+            time.sleep(2)
+            sys.exit()
+        else:
+            print("Invalid Input")
             self.giftData()
 
 
