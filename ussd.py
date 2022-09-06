@@ -198,6 +198,37 @@ class USSD:
         else:
             print("Invalid Input")
             self.giftData()
+        
+    def shareData(self):
+        self.userInput3 = input("""
+            1. Share,
+            2. Unshare,
+        > """)
+        if self.userInput3 == "1":
+            print("Please enter subscriber\'s number:")
+            self.userInput4 = input("-->  ")
+            if len(self.userInput4) == 11:
+                print("Your request for Data sharing has been sent")
+            elif len(self.userInput4) < 11:
+                print("You have input an incomplete number")
+            elif len(self.userInput4) > 11:
+                print("You have input more than 11 digit number")
+            else:
+                print("Invalid Input")
+        elif self.userInput3 == "2":
+            print("Please enter subscriber\'s number:")
+            self.userInput5 = input("-->  ")
+            if len(self.userInput5) == 11:
+                print("Your request to unshare Data has been sent")
+            elif len(self.userInput5) < 11:
+                print("You have input an incomplete number")
+            elif len(self.userInput5) > 11:
+                print("You have input more than 11 digit number")
+            else:
+                print("Invalid Input") 
+        else:
+            print("WRONG INPUT")
+            self.shareData()
 
 
 glo = USSD()
