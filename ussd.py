@@ -154,6 +154,10 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.megaPlan()
+        elif self.user9 == "4":
+            print("ussd code running...")
+            time.sleep(2)
+            self.superMegaPlan()
 
 
 glo = USSD()
