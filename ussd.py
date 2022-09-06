@@ -109,14 +109,16 @@ class USSD:
         if self.user3 == "1":
             print("ussd code running...")
             time.sleep(2)
-             self.input =  input("""
+            self.input =  input("""
                 1. Proceed(Auto-Renew)
                 2. Proceed(One-Off)
             > """)
             if (self.input == "1") or (self.input == "2"):
                 time.sleep(1)
                 self.buyData()
-            self.buyData()
+            else:
+                print("Invalid")
+                self.data()
         elif self.user3 == "2":
             print("ussd code running...")
             time.sleep(2)
@@ -133,6 +135,9 @@ class USSD:
         elif self.user3 == "0":
             print("Thank you for choosing Glo")
             sys.exit()
+        else:
+            print("Invalid")
+            self.data()
     
     def buyData(self):
         self.user4 = input("""
@@ -158,7 +163,7 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.superMegaPlan()
-        elif self.user9 == "0"
+        elif self.user9 == "0":
             print("Thank you for choosing Glo")
             time.sleep(2)
             sys.exit()
@@ -191,7 +196,7 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.superMegaPlan()
-        elif self.user9 == "0"
+        elif self.user9 == "0":
             print("Thank you for choosing Glo")
             time.sleep(2)
             sys.exit()
