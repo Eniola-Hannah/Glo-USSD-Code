@@ -150,6 +150,10 @@ class USSD:
             print("ussd code running...")
             time.sleep(2)
             self.monthlyPlan()
+        elif self.user9 == "3":
+            print("ussd code running...")
+            time.sleep(2)
+            self.megaPlan()
 
 
 glo = USSD()
